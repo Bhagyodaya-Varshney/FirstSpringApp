@@ -1,4 +1,5 @@
-package com.example.firstspringapp;
+package com.example.firstspringapp.controller;
+import com.example.firstspringapp.dto.User;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -30,6 +31,11 @@ public class HelloController {
     @GetMapping("/param/{name}")
     public String sayHelloPathVariable(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz";
+    }
+
+    @PostMapping("/post")
+    public String sayHello(@RequestBody User user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
     }
 
 }
