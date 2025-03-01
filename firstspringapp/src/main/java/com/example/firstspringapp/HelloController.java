@@ -21,4 +21,8 @@ public class HelloController {
     public String deleteHello() {
         return "Hello from BridgeLabz - DELETE Request";
     }
+    
+    public String hiiHello(){
+        return "Hii Kunal";
+    }
 }
